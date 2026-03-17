@@ -41,12 +41,12 @@ const Hero3D = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(37,99,235,0.4)]">
+            <a href="#projects" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(37,99,235,0.4)] flex items-center justify-center">
               View Projects
-            </button>
-            <button className="px-8 py-3 bg-card-bg hover:bg-white/10 dark:hover:bg-white/10 text-text-main font-bold rounded-full border border-card-border transition-all hover:scale-105 active:scale-95 backdrop-blur-sm">
+            </a>
+            <a href="#contact" className="px-8 py-3 bg-card-bg hover:bg-white/10 dark:hover:bg-white/10 text-text-main font-bold rounded-full border border-card-border transition-all hover:scale-105 active:scale-95 backdrop-blur-sm flex items-center justify-center">
               Contact Me
-            </button>
+            </a>
           </div>
         </motion.div>
         
