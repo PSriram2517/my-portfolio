@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, Code, Rocket, Brain } from 'lucide-react';
-// Profile image integration with fallback to avoid build errors
-const profileImgPath = "/src/assets/1736744893803.jpg.jpeg";
+import profileImg from '../assets/1736744893803.jpg.jpeg';
 
 const About = () => {
   const [imgError, setImgError] = React.useState(false);
@@ -58,7 +57,7 @@ const About = () => {
               {!imgError ? (
                 <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
                   <img 
-                    src={profileImgPath} 
+                    src={profileImg} 
                     alt="Profile" 
                     onError={() => setImgError(true)}
                     className="w-full aspect-[3/4] object-cover grayscale-[0.3] hover:grayscale-0 transition-all duration-700 h-64 md:h-80"

@@ -6,10 +6,9 @@ import { motion } from 'framer-motion';
 
 const Skills3D = ({ isDarkMode }) => {
   const skillCategories = [
-    { title: 'Artificial Intelligence', skills: ['Python', 'TensorFlow', 'PyTorch', 'Scikit-Learn', 'Deep Learning'] },
-    { title: 'Data Science', skills: ['SQL', 'Pandas', 'NumPy', 'Data Visualization', 'Statistical Analysis'] },
-    { title: 'Web Development', skills: ['React.js', 'Next.js', 'Node.js', 'Tailwind CSS', 'Three.js'] },
-    { title: 'Tools & Others', skills: ['Git', 'Docker', 'AWS', 'VS Code', 'Jupyter Notebooks'] },
+    { title: 'Frontend', skills: ['React.js', 'Next.js', 'Tailwind CSS', 'Three.js'] },
+    { title: 'Backend', skills: ['Node.js', 'Express', 'MongoDB'] },
+    { title: 'Tools & Others', skills: ['Git', 'Github', 'VS Code'] },
   ];
 
   return (
