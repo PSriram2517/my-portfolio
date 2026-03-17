@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Code } from 'lucide-react';
+import insuranceImg from '../assets/project-insurance.png';
+import keyboardImg from '../assets/project-keyboard.png';
 
 const ProjectCard = ({ project, index }) => {
   return (
@@ -14,9 +16,17 @@ const ProjectCard = ({ project, index }) => {
     >
       <div className="bg-card-bg backdrop-blur-xl rounded-[22px] p-6 h-full flex flex-col border border-card-border">
         <div className="h-48 mb-6 rounded-2xl bg-text-main/5 overflow-hidden relative group-hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] transition-shadow">
-          <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-purple-600/10 flex items-center justify-center">
-            <Code size={48} className="text-text-main/20 group-hover:text-blue-500/40 transition-colors duration-500" />
-          </div>
+          {project.image ? (
+            <img 
+              src={project.image} 
+              alt={project.title}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-purple-600/10 flex items-center justify-center">
+              <Code size={48} className="text-text-main/20 group-hover:text-blue-500/40 transition-colors duration-500" />
+            </div>
+          )}
           <div className="absolute top-4 right-4 flex gap-2 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
             <a href={project.github} className="p-2 bg-bg-main/80 backdrop-blur-md rounded-full text-text-main hover:text-blue-500 transition-colors border border-card-border">
               <Github size={18} />
@@ -48,6 +58,7 @@ const Projects3D = () => {
       title: "Insurance Claim Prediction",
       description: "An AI-driven predictive system that analyzes historical data to forecast claim likelihood and costs using ensemble learning techniques.",
       tags: ["Python", "Scikit-Learn", "XGBoost", "Pandas", "React"],
+      image: insuranceImg,
       github: "#",
       live: "#"
     },
@@ -55,6 +66,7 @@ const Projects3D = () => {
       title: "Smart AI Keyboard",
       description: "A specialized NLP-powered keyboard supporting tribal languages with predictive text and phonetic transliteration to preserve linguistic heritage.",
       tags: ["Python", "TensorFlow", "NLP", "React", "Flask"],
+      image: keyboardImg,
       github: "#",
       live: "#"
     }

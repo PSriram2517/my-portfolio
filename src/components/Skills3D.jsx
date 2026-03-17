@@ -6,9 +6,9 @@ import { motion } from 'framer-motion';
 
 const Skills3D = ({ isDarkMode }) => {
   const skillCategories = [
-    { title: 'Frontend', skills: ['React.js', 'Next.js', 'Tailwind CSS', 'Three.js'] },
-    { title: 'Backend', skills: ['Node.js', 'Express', 'MongoDB'] },
-    { title: 'Tools & Others', skills: ['Git', 'Github', 'VS Code'] },
+    { title: 'Frontend', skills: ['HTML', 'CSS', 'JavaScript', 'React.js', 'Next.js', 'Tailwind CSS', 'Three.js'] },
+    { title: 'Backend', skills: ['Python', 'SQL', 'C++', 'Node.js', 'Express', 'MongoDB'] },
+    { title: 'Tools & Others', skills: ['Git', 'Github', 'VS Code', 'Docker', 'Postman', 'Postgres', 'Redis', 'Canva'] },
   ];
 
   return (
@@ -37,7 +37,7 @@ const Skills3D = ({ isDarkMode }) => {
 
         <div className="grid lg:grid-cols-1 gap-12 items-center">
           {/* Skill List - Now centered and on top */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {skillCategories.map((category, idx) => (
               <motion.div
                 key={idx}
@@ -45,12 +45,12 @@ const Skills3D = ({ isDarkMode }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-6 rounded-2xl bg-card-bg border border-card-border backdrop-blur-md hover:border-blue-500/50 transition-all group shadow-sm hover:shadow-lg dark:hover:bg-white/[0.08]"
+                className="p-6 rounded-2xl bg-card-bg border border-card-border backdrop-blur-md hover:border-blue-500/50 transition-all group shadow-sm hover:shadow-lg dark:hover:bg-white/[0.08] w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)] flex flex-col items-center"
               >
-                <h3 className="text-xl font-bold mb-4 text-text-main group-hover:text-blue-500 transition-colors">
+                <h3 className="text-xl font-bold mb-4 text-text-main group-hover:text-blue-500 transition-colors text-center">
                   {category.title}
                 </h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 justify-center">
                   {category.skills.map((skill, sIdx) => (
                     <span 
                       key={sIdx}
